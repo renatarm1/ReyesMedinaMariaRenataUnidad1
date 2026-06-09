@@ -1,0 +1,110 @@
+.auth-container {
+  min-height: 100vh;
+  background-color: #0a192f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 4%;
+}
+
+.auth-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+}
+
+.auth-title {
+  font-family: 'Silkscreen', sans-serif;
+  color: #fff;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.auth-subtitle {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+.auth-form .form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form label {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.auth-form input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.auth-form input:focus {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.captcha-group {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-auth {
+  width: 100%;
+  background: #fff;
+  color: #0a192f;
+  border: none;
+  padding: 14px;
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-auth:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.response-message {
+  margin-top: 20px;
+  font-size: 12px;
+  font-family: monospace;
+  padding: 10px;
+  letter-spacing: 0.5px;
+}
+.response-message.error { color: #ff6b6b; background: rgba(255, 107, 107, 0.1); border-left: 3px solid #ff6b6b; }
+.response-message.success { color: #51cf66; background: rgba(81, 207, 102, 0.1); border-left: 3px solid #51cf66; }
+.response-message.info { color: #339af0; }
+.auth-toggle-text {
+  text-align: center;
+  margin-top: 20px;
+}
+.auth-toggle-text a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  text-decoration: none;
+  font-family: monospace;
+  transition: color 0.3s;
+}
+.auth-toggle-text a:hover {
+  color: #fff;
+  text-decoration: underline;
+}

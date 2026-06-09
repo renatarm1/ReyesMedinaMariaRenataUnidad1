@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Modifica tu clase .hero-container para quitar la imagen vieja */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #0a192f; /* Fondo negro de respaldo mientras carga el video */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Space Grotesk', sans-serif;
+  perspective: 1000px; 
+}
+
+/* ESTILOS PARA EL VIDEO DE FONDO */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que el video actúe como "background-size: cover" */
+  z-index: 1; /* Se queda al fondo de todo */
+  pointer-events: none; /* Evita que el video interfiera con los clics o el mouse */
+  opacity: 0.45;
+  filter: contrast(120%) brightness(90%);
+}
+
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.header-left, .header-right {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-item {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.site-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.search-box-simulated input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  font-size: 11px;
+  outline: none;
+  width: 100px;
+}
+
+/* Tarjeta Central Interactiva */
+.floating-card {
+  position: relative;
+  width: 540px;
+  height: 690px;
+  background-color: #1a1a1a;
+  box-shadow: 0 50px 100px rgba(0,0,0,0.7);
+  z-index: 3;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: transform 0.1s ease-out; /* Transición suave para cuando el mouse se retire vuelva a su centro */
+  will-change: transform;
+}
+
+.floating-card img {
+  width: 100%;      
+  height: 100%;      
+  object-fit: cover;  
+  object-position: center; 
+  transition: opacity 0.3s ease-in-out;
+  filter: grayscale(0%) !important; 
+}
+
+/* CAPA TRASERA: Pone "SUMMER" a la derecha detrás de la tarjeta */
+.text-background {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* Lo empuja a la derecha */
+  padding: 0 4%;
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 6.8vw; 
+  font-weight: 700;
+  letter-spacing: -2px;
+  pointer-events: none;
+  color: #ffffff;
+  z-index: 2; /* Detrás de la tarjeta */
+}
+
+/* CAPA FRONTAL: Pone "SPRING" a la izquierda encima de la tarjeta con brillo */
+.text-front {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* Lo empuja a la izquierda */
+  padding: 0 4%;
+  font-family: 'Silkscreen', sans-serif; 
+  font-size: 6.8vw; /* Mismo tamaño exacto que SUMMER */
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: #ffffff;
+  
+  /* Tu efecto de brillo plateado */
+  text-shadow: 0 0 10px rgba(255,255,255,0.6), 0 0 25px rgba(255,255,255,0.4);
+  
+  pointer-events: none; 
+  z-index: 4; /* Al frente de la tarjeta */
+}
+
+/* ESTILOS DE LA SECCIÓN DE PRODUCTOS */
+.products-section {
+  background-color: #0a192f; /* Mismo azul profundo del Hero */
+  padding: 100px 4%;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-title {
+  font-family: 'Silkscreen', sans-serif;
+  color: #fff;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  margin-bottom: 50px;
+  opacity: 0.9;
+}
+
+/* Rejilla CSS Grid inteligente */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Efecto de enfoque al pasar el mouse por la tarjeta */
+.product-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-5px);
+}
+
+.product-image-wrapper {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: #0d1e36;
+}
+
+.product-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Zoom elegante a la foto del producto */
+.product-card:hover .product-image-wrapper img {
+  transform: scale(1.06);
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.product-name {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.product-price {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  font-family: 'Silkscreen', sans-serif;
+}
