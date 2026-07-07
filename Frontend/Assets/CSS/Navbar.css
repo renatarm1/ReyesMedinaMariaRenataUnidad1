@@ -1,0 +1,65 @@
+.site-header {
+  /* Mantenemos tu idea de diseño: flota arriba de los elementos */
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100; /* Lo subimos un poco para que no lo tape ningún banner */
+}
+
+.header-left, .header-right {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+/* Centrado perfecto del Logo estilo Adidas */
+.site-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+/* Enlaces superiores (AYUDA, CONTACTANOS) */
+.nav-item {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  text-transform: uppercase;
+}
+
+.nav-item:hover {
+  opacity: 1;
+  color: #00f2fe; /* Un toque neón al pasar el mouse */
+}
+
+/* Barra de búsqueda simulada */
+.search-box-simulated input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  font-size: 11px;
+  outline: none;
+  width: 100px;
+  transition: border-color 0.2s;
+}
+
+.search-box-simulated input:focus {
+  border-bottom: 1px solid #00f2fe; /* Ilumina la línea al escribir */
+}
+
+/* Reducción sutil del botón gomita para que quepa bien en la barra */
+.header-right .gummy-jelly-btn {
+  padding: 10px 22px; /* Más pequeño para que combine con tus textos de 11px */
+  font-size: 0.9rem;
+}

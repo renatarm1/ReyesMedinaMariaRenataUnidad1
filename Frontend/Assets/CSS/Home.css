@@ -32,48 +32,6 @@
   filter: contrast(120%) brightness(90%);
 }
 
-.site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 30px 4%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10;
-}
-
-.header-left, .header-right {
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
-
-.nav-item {
-  font-size: 11px;
-  letter-spacing: 2px;
-  color: #fff;
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-.site-logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.search-box-simulated input {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  color: #fff;
-  font-size: 11px;
-  outline: none;
-  width: 100px;
-}
-
 /* Tarjeta Central Interactiva */
 .floating-card {
   position: relative;
@@ -149,7 +107,8 @@
   opacity: 0.9;
 }
 
-/* Rejilla CSS Grid inteligente */
+
+/* Asegura la cuadrícula con tus estilos originales */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -160,11 +119,10 @@
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 20px;
-  cursor: pointer;
+  cursor: default; /* Cambiado a default para que solo tenga mano al interactuar con el botón */
   transition: all 0.3s ease;
 }
 
-/* Efecto de enfoque al pasar el mouse por la tarjeta */
 .product-card:hover {
   border-color: rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.04);
@@ -186,15 +144,15 @@
   transition: transform 0.5s ease;
 }
 
-/* Zoom elegante a la foto del producto */
 .product-card:hover .product-image-wrapper img {
   transform: scale(1.06);
 }
 
-.product-info {
+/* ACOMODO DE LA INFORMACIÓN Y EL BOTÓN INTERNO */
+.product-shop-card {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column; /* Alinea los elementos uno debajo de otro */
+  gap: 10px;
   font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -205,8 +163,17 @@
   letter-spacing: 1px;
 }
 
-.product-price {
+.precio {
   color: rgba(255, 255, 255, 0.6);
   font-size: 12px;
-  font-family: 'Silkscreen', sans-serif;
+  font-family: 'Silkscreen', sans-serif; /* Mantenemos tu tipografía cool */
+}
+
+/* Ajuste de tamaño para el botón gomita dentro de las tarjetas */
+.product-shop-card .add-to-cart-btn {
+  margin-top: 5px;
+  padding: 10px 15px;
+  font-size: 0.85rem;
+  width: 100%; /* Hace que abarque todo el ancho de la tarjeta */
+  text-align: center;
 }

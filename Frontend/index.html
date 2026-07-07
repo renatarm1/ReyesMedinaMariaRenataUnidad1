@@ -11,37 +11,19 @@
     <link rel="stylesheet" href="./assets/CSS/Footer.css">
     <link rel="stylesheet" href="./assets/CSS/Auth.css">
     <link rel="stylesheet" href="./assets/CSS/Error.css">
+    <link rel="stylesheet" href="./assets/CSS/Navbar.css">
+    <link rel="stylesheet" href="./assets/CSS/Carrito.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
   <div id="mainContent">
       <!--  Hero Section -->
       <section class="hero-container" id="heroContainer">
-        <video autoplay loop muted playsinline class="background-video">
+        <video autoplay loop muted playsinline class="background-video"s>
           <source src="./assets/videos/adidas-runway.mp4" type="video/mp4">
           Tu navegador no soporta videos en HTML5.
         </video>
-        <!-- Navbar -->
-        <header class="site-header">
-          <div class="header-left">
-            <span class="nav-item">AYUDA</span>
-            <span class="nav-item">CONTACTANOS</span>
-          </div>
-          <div class="site-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff" width="45px" height="45px">
-              <path d="M24 19.5L16.9 7.1l-2.8 1.6 5.3 9.3h4.6zm-7.6 0l-5.4-9.4-2.8 1.6 3.6 6.3 1.1 1.5h3.5zm-7.3 0L5.7 13.7l-2.8 1.6 2.4 4.2h3.8z"/>
-            </svg>
-          </div>
-          <div class="header-right">
-            <div class="search-box-simulated">
-              <input type="text" placeholder="SEARCH..." />
-            </div>
-            <span class="nav-item" onclick="goToAuthView()" style="cursor: pointer;">LOGIN</span>
-          </div>
-        </header>
         <div class="text-background">
-
-          
           <span class="text-right">SUMMER</span>
         </div>
         <div class="floating-card" id="adidasCard">
@@ -55,50 +37,68 @@
       <!-- Products Section -->
       <section class="products-section">
         <h2 class="section-title">SELECTED ORIGINALS</h2>
-        
         <div class="products-grid">
+          
           <div class="product-card">
             <div class="product-image-wrapper">
               <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=500" alt="Adidas 1">
             </div>
-            <div class="product-info">
+            <div class="product-shop-card">
               <span class="product-name">FORUM LOW CLASSIC</span>
-              <span class="product-price">$120 USD</span>
+              <span class="precio">$120 USD</span>
+              <button class="add-to-cart-btn" data-name="FORUM LOW CLASSIC" data-price="120">
+                Agregar 🛒
+              </button>
             </div>
           </div>
+
           <div class="product-card">
             <div class="product-image-wrapper">
               <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?q=80&w=500" alt="Adidas 2">
             </div>
-            <div class="product-info">
+            <div class="product-shop-card">
               <span class="product-name">ULTRABOOST LIGHT</span>
-              <span class="product-price">$190 USD</span>
+              <span class="precio">$190 USD</span>
+              <button class="add-to-cart-btn" data-name="ULTRABOOST LIGHT" data-price="190">
+                Agregar 🛒
+              </button>
             </div>
           </div>
+
           <div class="product-card">
             <div class="product-image-wrapper">
               <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=500" alt="Adidas 3">
             </div>
-            <div class="product-info">
+            <div class="product-shop-card">
               <span class="product-name">SAMBA ALTERNATIVE ROAD</span>
-              <span class="product-price">$110 USD</span>
+              <span class="precio">$110 USD</span>
+              <button class="add-to-cart-btn" data-name="SAMBA ALTERNATIVE ROAD" data-price="110">
+                Agregar 🛒
+              </button>
             </div>
           </div>
+
           <div class="product-card">
             <div class="product-image-wrapper">
               <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=500" alt="Adidas 4">
             </div>
-            <div class="product-info">
+            <div class="product-shop-card">
               <span class="product-name">NMD_R1 V3 DESIGN</span>
-              <span class="product-price">$160 USD</span>
+              <span class="precio">$160 USD</span>
+              <button class="add-to-cart-btn" data-name="NMD_R1 V3 DESIGN" data-price="160">
+                Agregar 🛒
+              </button>
             </div>
           </div>
+
         </div>
       </section>
   </div>
-    <script src="./views/Home.js"></script>
-    <script src="./views/Auth.js"></script>  
-    <script src="./views/Error.js"></script> 
-    <script src="./components/Footer.js"></script>
+  <script src="./views/Home.js"></script>
+  <script src="./views/Auth.js"></script>  
+  <script src="./views/Error.js"></script> 
+  <script src="./components/Navbar.js"></script>
+  <script src="./components/Footer.js"></script>
+  <script src="./components/Carrito.js"></script>
 </body>
 </html>
